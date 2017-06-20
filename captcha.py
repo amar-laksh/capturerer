@@ -18,9 +18,14 @@ def getCaptcha(directory, images):
     for image in images:
         captcha.update(lvalue(image, directory))
         print captcha
-    return ' '.join(map(str,[captcha[key] for key in sorted(captcha)]))
+    return ' '.join(
+                map(
+                    str
+                    ,[captcha[key] for key in sorted(captcha)]
+                    )
+                )
 
-time.sleep(1)
+time.sleep(2)
 images = [0,1,2,3,4,5,6,7,8,9,10,11]
 
 expr =  str(
